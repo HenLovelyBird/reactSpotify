@@ -25,7 +25,7 @@ class TopNav extends React.Component {
                 <input type="text" placeholder="Search a title here" 
                     value={this.props.searchValue}
                     onChange={(input) => this.props.saveSearchString(input)} />
-                <button type="search" onClick={() => this.props.searchMovies()}>Search</button>
+                <button type="search" onClick={() => this.props.searchArtists()}>Search</button>
             </div>
             </NavItem>
         </Nav>
