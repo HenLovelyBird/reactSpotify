@@ -15,7 +15,7 @@ class HomePage extends React.Component {
         // i had this in before but i took it out bc i wanted to be able to search for any artist i wanted. 
 
         artistNames.forEach(async artist => {
-            let response = await fetch("http://www.omdbapi.com/?apikey=24ad60e9&s=" + artist + "&limit=6",{
+            let response = await fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + artist + "&limit=6",{
                 method: "GET",
                 headers: {
                     "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",

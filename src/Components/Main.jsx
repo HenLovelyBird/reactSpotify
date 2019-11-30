@@ -33,6 +33,7 @@ class Main extends React.Component {
         let albumResult = await response.json();
         this.setState({albums: albumResult.Search}, () => console.log(this.state))
       }
+
     render() {
         return (
             <Router>
@@ -40,9 +41,10 @@ class Main extends React.Component {
                 searchArtists={this.searchArtists}
                 searchAlbums={this.searchAlbums}
                 saveSearchString={this.searchString}
-                searchValue={this.state.searchString}/>
+                searchValue={this.state.searchString}
+                />
 
-                <LeftNav /> 
+                {/*<LeftNav />*/} 
 
                 <Container>
                     <Route path="/HomePage" component={HomePage} />
