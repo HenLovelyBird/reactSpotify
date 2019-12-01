@@ -11,7 +11,7 @@ class AlbumPage extends React.Component {
         let albumNames = ['kid a', 'tropicalia'];
         
         albumNames.forEach(async album => {
-            let response = await fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?q= + album {
+            let response = await fetch ("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + album, {
                 method: "GET",
                 headers: {
                     "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
@@ -24,16 +24,25 @@ class AlbumPage extends React.Component {
                 artist: albumInfo.data
                 });
             }
+        )
+    }
         render() {
             let album = this.state.album; 
                 return (
                     <Container flex>
                         {this.state.album.map((album, index) =>
-                        {{album.items} key={index} album={album.name}} 
+                        <div>{album.items} key={index} album={album.name}</div>)}
                     </Container>
             );
+            }
         }
-        }
+            
+
+         
+                
+                
+        
+    
 
 
 
